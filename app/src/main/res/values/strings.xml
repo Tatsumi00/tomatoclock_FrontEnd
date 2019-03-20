@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">番茄钟</string>
+    <string name="Todo">待办</string>
+    <string name="statics">统计数据</string>
+    <string name="settings">我的</string>
+    <string name="create_todo">创建待办事件</string>
+    <string name="create_todo_hint1">番茄钟名字</string>
+    <string name="create_todo_hint2">番茄钟时间(分钟)</string>
+    <string name="positive">确定</string>
+    <string name="negative">取消</string>
+    <string name="delete_todo">删除番茄钟</string>
+    <string name="new_tomatotodo">番茄钟支持倒计时，时间需小于180分钟，标题字符需少于20个</string>
+    <string name="sort_and_swipe">排序与编辑</string>
+    <string name="whitenoise_rain">白噪音-雨声</string>
+    <string name="whitenoise_nature">白噪音-大自然</string>
+    <string name="whitenoise_stars">白噪音-星空</string>
+    <string name="statics_1">累计数据</string>
+    <string name="statics_2">番茄数</string>
+    <string name="statics_3">总计时间</string>
+    <string name="statics_4">专注度</string>
+    <string name="statics_5">时间分布</string>
+    <string name="clear_all_statics">重置统计数据</string>
+    <string name="achievements_statics">成就列表</string>
+    <string name="statics_6">成就数</string>
+    <string name="statics_7">成就点数</string>
+    <string name="recent_achievement">最近达成的成就</string>
+    <string name="get_more_achieves">加油获得更多成就吧</string>
+    <string name="change_theme_text">改变外观</string>
+    <string name="settings_more">更多设置</string>
+    <string name = "about">关于</string>
+    <string name="background_color">更多主题颜色设置</string>
+    <string name="orange">Quite Orange</string>
+    <string name="blue">Really Blue</string>
+    <string name="show_calendar">时间线</string>
+</resources>

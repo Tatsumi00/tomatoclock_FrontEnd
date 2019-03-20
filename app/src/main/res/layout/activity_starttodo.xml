@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/default_background_1">
+
+
+
+    <TextView
+        android:gravity="center_vertical|center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
+        android:textSize="23sp"
+        android:textColor="#fff"
+        android:lineSpacingMultiplier = "1.5"
+        android:id="@+id/starttodo_slogan"
+        android:fontFamily="@font/slogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:lineSpacingMultiplier="1.5"
+        android:singleLine="false"
+        android:gravity="center_vertical|center"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:id="@+id/starttodo_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.njupt.qmj.tomatotodo.view.CountdownView
+        android:id="@+id/count_down_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        app:countDown_innerCircleColor="#90a4ae"
+        app:countDown_outsideCircleColor="#fff"
+        app:countDown_centerTextSize="25dp"
+        app:countDown_circleWidth="4dp" />
+
+    <FrameLayout
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/always_on_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src = "@drawable/ic_wb_sunny_black_24dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/play_music_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src = "@drawable/ic_audiotrack_black_24dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/pause_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src = "@drawable/ic_pause_black_24dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/repeat_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src = "@drawable/ic_repeat_black_24dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/stop_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src = "@drawable/ic_stop_black_24dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
