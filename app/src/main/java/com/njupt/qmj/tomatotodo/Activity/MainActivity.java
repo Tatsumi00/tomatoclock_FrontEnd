@@ -9,14 +9,27 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.njupt.qmj.tomatotodo.Adapter.BottomNavigationAdapter;
 import com.njupt.qmj.tomatotodo.Fragment.TabFragment3;
+import com.njupt.qmj.tomatotodo.LitePalDataBase.TodoDataBase;
 import com.njupt.qmj.tomatotodo.ViewPager.ViewPagerSlide;
 import com.njupt.qmj.tomatotodo.Fragment.TabFragment1;
 import com.njupt.qmj.tomatotodo.Fragment.TabFragment2;
 import com.njupt.qmj.tomatotodo.R;
+
+
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.util.List;
+
+import static org.litepal.Operator.where;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +39,46 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+       final List< TodoDataBase > todoDataBases = where()
+                .find(TodoDataBase.class);
+
+        for(int a=0;a<todoDataBases.size();++a){
+            final int index=a;
+
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        HttpURLConnection conn;
+                        URL url = new URL("https://mercifuldruid.cn/mysql?a="+todoDataBases.get(index).getName()+"&b="+todoDataBases.get(index).getTime());
+                        conn = (HttpURLConnection) url.openConnection();
+                        conn.setRequestMethod("GET");//设置请求方式
+
+                        if (conn.getResponseCode() != 200)//判断是否请求成功
+                            throw new RuntimeException("运行异常");
+
+
+
+                    } catch (ProtocolException e) {
+                        e.printStackTrace();
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+            }).start();
+
+        }
+
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -18,7 +18,7 @@ android {
     }
 }
 
-dependencies {
+dependencies {java
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'org.litepal.android:core:3.0.0'
