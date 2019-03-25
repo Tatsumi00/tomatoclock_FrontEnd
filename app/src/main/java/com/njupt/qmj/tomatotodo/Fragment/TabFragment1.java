@@ -133,7 +133,7 @@ public void iniDialog(){
     createDialog.show();
 }
 
-public void iniData() {
+private void iniData() {
         List<TodoDataBase> dataBases = findAll(TodoDataBase.class);
         TodosList.clear();
         for (TodoDataBase todoDataBase: dataBases){
